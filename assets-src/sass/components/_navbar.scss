@@ -1,0 +1,120 @@
+/*! Sticky navigation bar.
+  ========================================================================== */
+.navbar {
+  background-color: $dark-color;
+  padding: map-get($space, l);
+
+  &Logo {
+    margin-right: map-get($space, l);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      will-change: width;
+      transition: width 85ms linear;
+      width: 60px;
+      max-width: 200px;
+      height: auto;
+    }
+  }
+
+  &Title {
+    max-width: 30%;
+    margin-left: 0;
+    margin-right: auto;
+    color: $light-color;
+    font-family: $monserrat;
+    font-size: 1rem;
+
+    .siteTitle {
+      color: $light-color;
+      font-family: $monserrat;
+      font-size: 1.3rem;
+      font-weight: 600;
+      display: inline-block;
+      line-height: normal;
+      text-decoration: none;
+    }
+
+    h1 {
+      @extend .siteTitle;
+
+      margin: 0;
+    }
+  }
+
+  &Description {
+    font-size: 0.9rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    will-change: opacity, display;
+    transition: opacity 80ms linear, display 100ms linear;
+  }
+
+  &Menu {
+    width: 50%;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 map-get($space, m);
+
+      &.active {
+        font-weight: 600;
+
+        a {
+          color: $green-color;
+        }
+      }
+    }
+
+    a {
+      font-size: 1.2rem;
+      color: $light-color;
+    }
+  }
+
+  // Sticky navbar
+  &.sticky {
+    will-change: transform;
+    transition: transform 200ms linear;
+
+    &Top {
+      position: relative;
+      top: initial;
+      left: initial;
+      z-index: 999;
+    }
+
+    &NotTop {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 999;
+
+      .navbar {
+        &Logo img {
+          width: 20px;
+        }
+
+        &Description {
+          opacity: 0;
+          display: none;
+        }
+      }
+    }
+
+    &Pinned {
+      transform: translateY(0%);
+    }
+
+    &Unpinned {
+      transform: translateY(-100%);
+    }
+  }
+}

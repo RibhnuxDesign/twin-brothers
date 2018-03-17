@@ -1,0 +1,13 @@
+{
+  "name": "twin-brothers-customizer-js",
+  "version": "1.0.0",
+  "description": "Twin Brothers Customizer Javascript Bundle",
+  "scripts": {},
+  "keywords": [
+    "wordpress",
+    "wordpress-theme"
+  ],
+  "author": "Ribhnux Design",
+  "license": "GPL-2.0",
+  "private": true
+}

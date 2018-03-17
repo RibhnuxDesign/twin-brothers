@@ -1,0 +1,26 @@
+/* SASS Variables
+  ========================================================================== */
+
+/**
+ * Relative or absolute URL where all assets are served from
+ *
+ * @type {String}
+ */
+$base-url: '../../' !default;
+
+/* stylelint-disable color-no-hex */
+$dark-color: #08090a;
+$light-color: #fcf7f8;
+$green-color: #05cb98;
+/* stylelint-enable color-no-hex */
+
+$space: (
+  'xs': 2px,
+  's': 4px,
+  'm': 8px,
+  'l': 16px,
+  'xl': 32px
+);
+
+$monserrat: 'Montserrat', sans-serif !default;
+$open-sans: 'Open Sans', sans-serif !default;

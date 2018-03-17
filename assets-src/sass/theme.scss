@@ -1,0 +1,30 @@
+@charset 'UTF-8';
+
+/* Table of Contents
+  ========================================================================== */
+
+/**
+ * 1. Variable, Mixins, and helpers.
+ * 2. Vendors overrides (if any)
+ * 3. Base style
+ * 4. Layout-related sections (if any)
+ * 5. Components (if any)
+ * 6. Page-specific styles (if any)
+ * 7. Themes (if any)
+ */
+
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+@import
+  'base/normalize',
+  'base/general',
+  'base/wordpress',
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
+
+@import
+  'components/navbar';

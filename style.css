@@ -1,0 +1,22 @@
+/*
+Theme Name: Twin Brothers
+Theme URI: https://ribhnux.design/freebies/twin-brothers-theme
+Author: Ribhnux Design
+Author URI: https://ribhnux.design
+Description: A catchy WordPress Theme
+Version: 1.0.0
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twin-brothers
+Tags: right-sidebar, custom-menu, custom-logo, editor-style, featured-images, microformats, post-formats, rtl-language-support, threaded-comments, blog
+*/
+
+/*
+This file is just used to identify the theme in WordPress.
+The compiled CSS output can be found in /assets/
+
+Notes:
+All assets info can be found in twin-brothers-config.php in root theme directory.
+For Heaven-Driven Development please install deux-cli.
+https://deux.ribhnux.tech
+*/
