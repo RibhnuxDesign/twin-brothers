@@ -13,7 +13,7 @@
     img {
       will-change: width;
       transition: width 85ms linear;
-      width: 60px;
+      width: 45px;
       max-width: 200px;
       height: auto;
     }
@@ -68,6 +68,10 @@
 
         a {
           color: $green-color;
+
+          &:hover {
+            text-decoration: none;
+          }
         }
       }
     }

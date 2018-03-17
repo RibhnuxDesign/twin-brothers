@@ -333,6 +333,8 @@ h1,h2,h3,h4,h5,h6 {
 
 /*! CSS helper classes
   ========================================================================== */
+/*! Main content wrapper styles.
+  ========================================================================== */
 /*! Sticky navigation bar.
   ========================================================================== */
 .navbar {
@@ -361,7 +363,7 @@ h1,h2,h3,h4,h5,h6 {
   -webkit-transition: width 85ms linear;
   -moz-transition: width 85ms linear;
   transition: width 85ms linear;
-  width: 60px;
+  width: 45px;
   max-width: 200px;
   height: auto;
 }
@@ -421,6 +423,10 @@ h1,h2,h3,h4,h5,h6 {
 
 .navbarMenu li.active a {
   color: #05cb98;
+}
+
+.navbarMenu li.active a:hover {
+  text-decoration: none;
 }
 
 .navbarMenu a {
