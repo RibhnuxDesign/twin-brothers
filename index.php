@@ -17,7 +17,7 @@ get_header();
 ?>
 
 <div class="siteWrapper-home row">
-	<div id="content-wrapper" class="col contentWrapper" tabindex="-1">
+	<div id="content-wrapper" class="col-8 contentWrapper" tabindex="-1">
 		<main id="main" class="siteMain">
 			<?php
 			if ( have_posts() ) :

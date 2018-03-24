@@ -9,6 +9,7 @@
  */
 
 $twin_brothers_config = array(
+	'$allowSync' => true,
 	'optimize' => true,
 	'asset' => array(
 		'libs' => array(
@@ -104,7 +105,9 @@ $twin_brothers_config = array(
 		'class-tgm-plugin-activation',
 		'class-primary-menu-nav-walker',
 	),
-	'helpers' => array(),
+	'helpers' => array(
+		'svg-loader',
+	),
 	'menus' => array(
 		'primary' => array(
 			'walker' => true,

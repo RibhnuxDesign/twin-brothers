@@ -9,9 +9,12 @@
 $base-url: '../../' !default;
 
 /* stylelint-disable color-no-hex */
-$dark-color: #08090a;
-$light-color: #fcf7f8;
-$green-color: #05cb98;
+$dark-color: #08090a !default;
+$light-color: #fcf7f8 !default;
+$green-color: #05cb98 !default;
+$young-green-color: #02E08C !default;
+$gray-color: lighten($dark-color, 30) !default;
+$gray-color2: lighten($dark-color, 85) !default;
 /* stylelint-enable color-no-hex */
 
 $space: (

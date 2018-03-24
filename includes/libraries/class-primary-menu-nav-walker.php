@@ -58,13 +58,14 @@ if ( ! class_exists( 'Primary_Menu_Nav_Walker' ) ) :
 				$classes = (array) $item->classes;
 			}
 
-			$active_class = '';
+			$active_class = array();
+
 			if ( in_array( 'current-menu-item', $classes ) ) {
-				$active_class = ' class="active"';
+				$active_class[] = 'active';
 			} else if ( in_array( 'current-menu-parent', $classes ) ) {
-				$active_class = ' class="active-parent"';
+				$active_class[] = 'active-parent';
 			} else if ( in_array( 'current-menu-ancestor', $classes ) ) {
-				$active_class = ' class="active-ancestor"';
+				$active_class[] = 'active-ancestor';
 			}
 
 			$url = '';
@@ -74,8 +75,8 @@ if ( ! class_exists( 'Primary_Menu_Nav_Walker' ) ) :
 
 			$output .= sprintf(
 				/* translators: active class, url, title attribute and anchor text */
-				'<li %s><a href="%s" title="%s">%s</a></li>',
-				$active_class,
+				'<li class="%s"><a href="%s" title="%s" class="menu">%s</a></li>',
+				implode( ' ', $active_class ),
 				$url,
 				/* translators: %s: title */
 				sprintf( __( 'Link to %s' ), $item->title ),

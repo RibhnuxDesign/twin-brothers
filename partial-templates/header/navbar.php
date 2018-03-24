@@ -9,7 +9,7 @@
  */
 
 ?>
-<nav class="navbar d-flex">
+<nav class="navbar d-flex align-items-center">
 	<div class="navbarLogo">
 		<?php if ( has_custom_logo() ) : ?>
 			<?php the_custom_logo(); ?>
@@ -21,10 +21,10 @@
 	<div class="navbarTitle">
 		<?php if ( is_home() ) : ?>
 		<h1>
-			<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="siteTitle"><?php bloginfo( 'name' ); ?></a>
+			<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="noBg siteTitle"><?php bloginfo( 'name' ); ?></a>
 		</h1>
 		<?php else : ?>
-		<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="siteTitle"><?php bloginfo( 'name' ); ?></a>
+		<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="noBg siteTitle"><?php bloginfo( 'name' ); ?></a>
 		<?php endif; ?>
 
 		<div class="navbarDescription siteDescription">
@@ -35,10 +35,12 @@
 	<?php
 		wp_nav_menu( array(
 			'theme_location' => 'primary',
-			'menu_class'     => 'navbarMenu',
+			'menu_class'     => 'navbarMenu d-none d-lg-flex justify-content-end text-right',
 			'container'      => '',
 			'depth'          => 1,
 			'walker'         => new Primary_Menu_Nav_Walker(),
 		) );
 	?>
+
+	<?php get_template_part( 'partial-templates/header/searchbar' ); ?>
 </nav>

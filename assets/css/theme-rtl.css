@@ -206,6 +206,41 @@ template {
 
 /*! Basic layouts or standard styling
   ========================================================================== */
+article img {
+  max-width: 100%;
+}
+
+a:not(.noBg):not(.entry-meta a):not(.entry-title a):not(.tags-links a):not(.menu) {
+  background-image: -moz-linear-gradient(-330deg, #02E08C 0%, #05cb98 100%);
+  background-image: linear-gradient(-120deg, #02E08C 0%, #05cb98 100%);
+  background-repeat: no-repeat;
+  -moz-background-size: 100% 0.2em;
+  background-size: 100% 0.2em;
+  background-position: 100% 100%;
+  -webkit-transition: background-size 100ms ease-in, color 100ms linear;
+  -moz-transition: background-size 100ms ease-in, color 100ms linear, -moz-background-size 100ms ease-in;
+  transition: background-size 100ms ease-in, color 100ms linear;
+  transition: background-size 100ms ease-in, color 100ms linear, -moz-background-size 100ms ease-in;
+  padding: 4px;
+  text-decoration: none;
+  color: #08090a;
+}
+
+a:not(.noBg):not(.entry-meta a):not(.entry-title a):not(.tags-links a):not(.menu):hover {
+  color: #fcf7f8;
+  -moz-background-size: 100% 88%;
+  background-size: 100% 88%;
+}
+
+a:not(.noBg):not(.entry-meta a):not(.entry-title a):not(.tags-links a):not(.menu).noBg,.entry-meta a:not(.noBg):not(.entry-meta a):not(.entry-title a):not(.tags-links a):not(.menu),.entry-title a:not(.noBg):not(.entry-meta a):not(.entry-title a):not(.tags-links a):not(.menu),.tags-links a:not(.noBg):not(.entry-meta a):not(.entry-title a):not(.tags-links a):not(.menu) {
+  background: none;
+  padding: initial;
+}
+
+a:not(.noBg):not(.entry-meta a):not(.entry-title a):not(.tags-links a):not(.menu).noBg:hover,.entry-meta a:not(.noBg):not(.entry-meta a):not(.entry-title a):not(.tags-links a):not(.menu):hover,.entry-title a:not(.noBg):not(.entry-meta a):not(.entry-title a):not(.tags-links a):not(.menu):hover,.tags-links a:not(.noBg):not(.entry-meta a):not(.entry-title a):not(.tags-links a):not(.menu):hover {
+  color: initial;
+}
+
 /*! Default WordPress styles
   ========================================================================== */
 .entry-content img {
@@ -333,13 +368,19 @@ h1,h2,h3,h4,h5,h6 {
 
 /*! CSS helper classes
   ========================================================================== */
-/*! Main content wrapper styles.
+/*! Content wrapper styles.
   ========================================================================== */
+.siteWrapper {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
 /*! Sticky navigation bar.
   ========================================================================== */
 .navbar {
   background-color: #08090a;
   padding: 16px;
+  overflow: hidden;
 }
 
 .navbarLogo {
@@ -360,9 +401,9 @@ h1,h2,h3,h4,h5,h6 {
 
 .navbarLogo img {
   will-change: width;
-  -webkit-transition: width 85ms linear;
-  -moz-transition: width 85ms linear;
-  transition: width 85ms linear;
+  -webkit-transition: width 100ms linear;
+  -moz-transition: width 100ms linear;
+  transition: width 100ms linear;
   width: 45px;
   max-width: 200px;
   height: auto;
@@ -477,4 +518,165 @@ h1,h2,h3,h4,h5,h6 {
   -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);
   transform: translateY(-100%);
+}
+
+/*! Sidebar widget styles.
+  ========================================================================== */
+.widget {
+  margin-bottom: 32px;
+}
+
+.widget-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
+  padding: 0 0 8px;
+  margin: 0 0 16px;
+}
+
+.widget-title:before,.widget-title:after {
+  content: ' ';
+  position: absolute;
+  top: 100%;
+  right: 0;
+  border: 0;
+  border-bottom-width: 3px;
+  border-style: solid;
+}
+
+.widget-title:before {
+  width: 30%;
+  border-color: #02E08C;
+}
+
+.widget-title:after {
+  width: 100%;
+  border-color: rgba(8,9,10,0.1);
+}
+
+/*! Intuitive Search sytles in navigation bar.
+  ========================================================================== */
+.searchbar {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 32px;
+}
+
+.searchbar-toggler {
+  margin-right: 8px;
+}
+
+.searchbar-form {
+  opacity: 0;
+  -webkit-transition: opacity .2s ease;
+  -moz-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+  margin-right: 32px;
+}
+
+.searchbar-form .searchForm {
+  width: 100%;
+}
+
+.searchbar-form .searchForm input[type='text'] {
+  width: 100%;
+  color: #fcf7f8;
+  border: none;
+  outline: none;
+  padding: 16px;
+  background: none;
+  border-bottom: rgba(31,35,38,0.6) 2px solid;
+}
+
+.searchbar--show {
+  width: auto;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.searchbar--show .searchbar-toggler {
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.searchbar--show .searchbar-form {
+  opacity: 1;
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -ms-flex-order: 0;
+  order: 0;
+  width: 100%;
+}
+
+.searchbar--show svg * {
+  fill: #05cb98;
+}
+
+.navbar.stickyNotTop .searchForm input[type='text'] {
+  padding: 8px;
+  border-width: 1px;
+}
+
+/*! Article post entry styles.
+  ========================================================================== */
+article.post {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+article.post:first-child {
+  margin: 0;
+}
+
+article.post:last-child {
+  margin: 0;
+}
+
+.entry-meta {
+  font-size: 0.8rem;
+  color: #4c565f;
+}
+
+.entry-meta a {
+  font-weight: bold;
+}
+
+.entry-header+img {
+  margin: 16px 0;
+}
+
+.entry-title {
+  margin: 0 0 4px;
+}
+
+.entry-title a {
+  font-family: "Montserrat",sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.entry-content {
+  margin: 16px 0;
+}
+
+/*! Post categories and tags styles.
+  ========================================================================== */
+.tags-links svg {
+  height: 18px;
+}
+
+.tags-links a {
+  display: inline-block;
+  padding: 2px 4px !important;
+  font-size: 0.72rem;
+  line-height: 0.9rem;
+  background: #dfe2e5 !important;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
 }

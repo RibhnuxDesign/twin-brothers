@@ -1,2 +1,6 @@
-/*! Main content wrapper styles.
+/*! Content wrapper styles.
   ========================================================================== */
+.siteWrapper {
+  margin-top: map-get($space, xl);
+  margin-bottom: map-get($space, xl);
+}

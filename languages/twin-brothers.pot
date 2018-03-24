@@ -69,34 +69,30 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: searchform.php:11, searchform.php:15
-msgid "Search"
+#: searchform.php:12
+msgid "Type and enter to search!"
 msgstr ""
 
-#: searchform.php:13
-msgid "Search &hellip;"
-msgstr ""
-
-#: twin-brothers-config.php:111
+#: twin-brothers-config.php:114
 msgid "Primary"
 msgstr ""
 
-#: twin-brothers-config.php:112
+#: twin-brothers-config.php:115
 msgid "Top menu in navigation bar."
 msgstr ""
 
-#: twin-brothers-config.php:116
+#: twin-brothers-config.php:119
 msgid "Footer Menu"
 msgstr ""
 
-#: twin-brothers-config.php:117
+#: twin-brothers-config.php:120
 msgid "Footer menu in bottom."
 msgstr ""
 
-#: twin-brothers-config.php:122
+#: twin-brothers-config.php:125
 msgid "Sidebar"
 msgstr ""
 
-#: twin-brothers-config.php:123
+#: twin-brothers-config.php:126
 msgid "Sidebar on the right column."
 msgstr ""

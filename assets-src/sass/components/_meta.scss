@@ -1,0 +1,18 @@
+/*! Post categories and tags styles.
+  ========================================================================== */
+.tags-links {
+  svg {
+    height: 18px;
+  }
+
+  a {
+    @extend .noBg;
+
+    display: inline-block;
+    padding: map-get($space, xs) map-get($space, s) !important;
+    font-size: 0.72rem;
+    line-height: 0.9rem;
+    background: $gray-color2 !important;
+    border-radius: 2px;
+  }
+}

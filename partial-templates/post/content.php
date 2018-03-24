@@ -31,7 +31,7 @@
 
 	<div class="entry-content">
 		<?php
-			the_excerpt();
+			the_content( __( 'Read More' ) );
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'twin-brothers' ),
 				'after'  => '</div>',

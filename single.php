@@ -9,8 +9,8 @@
 get_header();
 ?>
 
-<div class="siteWrapper-single">
-	<div id="content-wrapper" class="contentWrapper" tabindex="-1">
+<div class="siteWrapper-single row">
+	<div id="content-wrapper" class="col-8 contentWrapper" tabindex="-1">
 		<main id="main" class="siteMain">
 
 			<?php

@@ -1,0 +1,49 @@
+/*! Article post entry styles.
+  ========================================================================== */
+article.post {
+  margin-top: map-get($space, xl);
+  margin-bottom: map-get($space, xl);
+
+  &:first-child {
+    margin: 0;
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.entry {
+  &-meta {
+    font-size: 0.8rem;
+    color: $gray-color;
+
+    a {
+      @extend .noBg;
+
+      font-weight: bold;
+    }
+  }
+
+  &-header {
+    & + img {
+      margin: map-get($space, l) 0;
+    }
+  }
+
+  &-title {
+    margin: 0 0 map-get($space, s);
+    
+    a {
+      @extend .noBg;
+
+      font-family: $monserrat;
+      font-weight: bold;
+      font-size: 2.5rem;
+    }
+  }
+
+  &-content {
+    margin: map-get($space, l) 0;
+  }
+}

@@ -1,0 +1,34 @@
+/*! Sidebar widget styles.
+  ========================================================================== */
+.widget {
+  margin-bottom: 32px;
+
+  &-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: relative;
+    padding: 0 0 map-get($space, m);
+    margin: 0 0 map-get($space, l);
+
+    &:before,
+    &:after {
+      content: ' ';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      border: 0;
+      border-bottom-width: 3px;
+      border-style: solid;
+    }
+
+    &:before {
+      width: 30%;
+      border-color: $young-green-color;
+    }
+
+    &:after {
+      width: 100%;
+      border-color: rgba($dark-color, 0.1);
+    }
+  }
+}

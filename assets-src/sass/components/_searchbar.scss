@@ -1,0 +1,59 @@
+/*! Intuitive Search sytles in navigation bar.
+  ========================================================================== */
+.searchbar {
+  display: flex;
+  width: 24px + map-get($space, m);
+
+  &-toggler {
+    margin-left: map-get($space, m);
+  }
+
+  &-form {
+    opacity: 0;
+    transition: opacity .2s ease;
+    margin-left: map-get($space, xl);
+
+    .searchForm {
+      width: 100%;
+
+      input[type='text'] {
+        width: 100%;
+        color: $light-color;
+        border: none;
+        outline: none;
+        padding: map-get($space, l);
+        background: none;
+        border-bottom: rgba(lighten($dark-color, 10), 0.6) 2px solid;
+      }
+    }
+  }
+
+  &--show {
+    width: auto;
+    flex-grow: 1;
+
+    .searchbar {
+      &-toggler {
+        order: 1;
+      }
+
+      &-form {
+        opacity: 1;
+        order: 0;
+        width: 100%;
+      }
+    }
+
+    svg * {
+      fill: $green-color;
+    }
+  }
+}
+
+.navbar.stickyNotTop {
+  .searchForm input[type='text'] {
+    padding: map-get($space, m);
+    border-width: 1px;
+  }
+}
+  

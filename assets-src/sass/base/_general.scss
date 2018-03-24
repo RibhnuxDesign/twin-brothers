@@ -1,2 +1,31 @@
 /*! Basic layouts or standard styling
   ========================================================================== */
+
+article img {
+  max-width: 100%;
+}
+
+a:not(.noBg):not(.menu) {
+  background-image: linear-gradient(120deg, $young-green-color 0%, $green-color 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 100%;
+  transition: background-size 100ms ease-in, color 100ms linear;
+  padding: map-get($space, s);
+  text-decoration: none;
+  color: $dark-color;
+  
+  &:hover {
+    color: $light-color;
+    background-size: 100% 88%;
+  }
+
+  &.noBg {
+    background: none;
+    padding: initial;
+
+    &:hover {
+      color: initial;
+    }
+  }
+}

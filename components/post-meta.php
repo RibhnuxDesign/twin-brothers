@@ -16,11 +16,11 @@ if ( ! function_exists( 'twin_brothers_post_meta' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'twin-brothers' ) );
+			$categories_list = get_the_category_list( esc_html__( ' ', 'twin-brothers' ) );
 			if ( $categories_list ) {
 				printf(
 					/* translators: categories list */
-					'<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'twin-brothers' ) . '</span>',
+					'<span class="cat-links">' . esc_html__( '%1$s', 'twin-brothers' ) . '</span>',
 					wp_kses( $categories_list, array(
 						'a' => array(
 							'href' => array(),
@@ -32,11 +32,12 @@ if ( ! function_exists( 'twin_brothers_post_meta' ) ) :
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'twin-brothers' ) );
+			$tags_list = get_the_tag_list( '', esc_html__( ' ', 'twin-brothers' ) );
 			if ( $tags_list ) {
+				twin_brothers_svg_loader( 'tag' );
 				printf(
 					/* translators: tag list */
-					'<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'twin-brothers' ) . '</span>',
+					'<span class="tags-links">' . esc_html__( '%1$s', 'twin-brothers' ) . '</span>',
 					wp_kses( $tags_list, array(
 						'a' => array(
 							'href' => array(),

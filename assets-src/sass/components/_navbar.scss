@@ -3,6 +3,7 @@
 .navbar {
   background-color: $dark-color;
   padding: map-get($space, l);
+  overflow: hidden;
 
   &Logo {
     margin-right: map-get($space, l);
@@ -12,7 +13,7 @@
 
     img {
       will-change: width;
-      transition: width 85ms linear;
+      transition: width 100ms linear;
       width: 45px;
       max-width: 200px;
       height: auto;

@@ -15,9 +15,23 @@ var navbar = (function () {
   headroom.init();
 });
 
+var searchbar = (function () {
+  var $ = jQuery;
+  $(document).on('click', '.searchbar-toggler', function (e) {
+    e.preventDefault();
+    $('.searchbar').toggleClass('searchbar--show');
+    var isHide = !$('.navbarMenu').hasClass('d-lg-flex');
+    $('.navbarMenu').toggleClass('d-lg-flex', isHide);
+    if (!isHide) {
+      $('input#s').focus();
+    }
+  });
+});
+
 (function ($) {
   $(document).ready(function () {
     navbar();
+    searchbar();
   });
 })(jQuery);
 
