@@ -1,0 +1,12 @@
+{
+  "name": "twin-brothers",
+  "version": "1.0.0",
+  "description": "Millenials Blog and Magazine WordPress Theme",
+  "repository": "https://oknoorap:okn00m12@github.com/RibhnuxDesign/twin-brothers.git",
+  "author": "Ribhararnus Pracutian <oknoorap@gmail.com>",
+  "license": "GPLv2",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.0.0"
+  }
+}

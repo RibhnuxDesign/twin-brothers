@@ -1,0 +1,15 @@
+<svg width="155" height="134" viewBox="0 0 155 134" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Category</title>
+<g id="Canvas" transform="translate(24 169)">
+<g id="Vector">
+<use xlink:href="#stack0_fill" transform="translate(-24 -169)"/>
+<use xlink:href="#stack1_fill" transform="translate(-24 -169)"/>
+<use xlink:href="#stack2_fill" transform="translate(-24 -169)"/>
+</g>
+</g>
+<defs>
+<path id="stack0_fill" d="M 0 43.2111L 77.493 0L 155 43.2111L 77.493 86.4129L 0 43.2111Z"/>
+<path id="stack1_fill" d="M 0 67.007L 9.09984 59.3199L 77.4977 96.0485L 145.779 59.1572L 155 67.0023L 77.493 110.204L 0 67.007Z"/>
+<path id="stack2_fill" d="M 0 90.8122L 9.09984 83.1205L 77.4977 119.858L 145.779 82.9577L 155 90.8122L 77.493 134L 0 90.8122Z"/>
+</defs>
+</svg>

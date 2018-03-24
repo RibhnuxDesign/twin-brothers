@@ -1,5 +1,9 @@
 /*! Basic layouts or standard styling
   ========================================================================== */
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+@import '../../node_modules/bootstrap/scss/tables';
 
 article img {
   max-width: 100%;
@@ -28,4 +32,8 @@ a:not(.noBg):not(.menu) {
       color: initial;
     }
   }
+}
+
+table {
+  @extend .table;
 }

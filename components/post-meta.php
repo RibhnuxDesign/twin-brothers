@@ -16,8 +16,9 @@ if ( ! function_exists( 'twin_brothers_post_meta' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ' ', 'twin-brothers' ) );
+			$categories_list = get_the_category_list( esc_html__( ', ', 'twin-brothers' ) );
 			if ( $categories_list ) {
+				twin_brothers_svg_loader( 'category-stack' );
 				printf(
 					/* translators: categories list */
 					'<span class="cat-links">' . esc_html__( '%1$s', 'twin-brothers' ) . '</span>',

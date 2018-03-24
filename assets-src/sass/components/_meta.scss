@@ -1,18 +1,24 @@
 /*! Post categories and tags styles.
   ========================================================================== */
+.cat-links,
 .tags-links {
-  svg {
-    height: 18px;
-  }
+  margin-right: map-get($space, l);
 
   a {
     @extend .noBg;
 
-    display: inline-block;
-    padding: map-get($space, xs) map-get($space, s) !important;
     font-size: 0.72rem;
     line-height: 0.9rem;
+  }
+}
+
+.tags-links {
+  a {
+    padding: map-get($space, xs) map-get($space, s) !important;
     background: $gray-color2 !important;
-    border-radius: 2px;
+
+    &:hover {
+      background: darken($gray-color2, 10) !important;
+    }
   }
 }
